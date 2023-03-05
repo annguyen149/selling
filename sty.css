@@ -1,0 +1,633 @@
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* For desktop: */
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*=col-] {
+    width: 100%;
+  }
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  background-color: gainsboro;
+  font-size: 20px;
+}
+.head .text-left {
+  width: 10%;
+  margin-left: 6%;
+}
+.head .text-left ul {
+  display: flex;
+  gap: 10px;
+}
+.head .text-left ul li {
+  list-style: none;
+  border: black solid 1px;
+  background-color: black;
+  padding: 10px;
+  border-radius: 100%;
+}
+.head .text-left ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.head .text-left ul li a:hover {
+  color: orangered;
+}
+.head .text-right {
+  width: 30%;
+}
+.head .text-right .mb-0 {
+  display: flex;
+  gap: 20px;
+}
+.head .text-right .mb-0 span a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+header div h1 {
+  font-size: 50px;
+}
+header div h1 a {
+  text-decoration: none;
+  color: black;
+}
+header div nav ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  flex-wrap: wrap;
+  font-size: 20px;
+  margin-top: 50px;
+}
+header div nav li a {
+  text-decoration: none;
+  color: black;
+}
+header div nav li a:hover {
+  color: orangered;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    margin-left: 10%;
+  }
+}
+.shopp, .overlay {
+  background: rgba(0, 0, 0, 0.4) url(images/hero_2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  max-width: 100%;
+}
+.shopp .shop, .overlay .shop {
+  width: 70%;
+  padding-top: 200px;
+  padding-left: 10%;
+  padding-bottom: 200px;
+}
+.shopp .shop h1, .overlay .shop h1 {
+  font-size: 70px;
+  color: aliceblue;
+}
+.shopp .shop .shop1, .overlay .shop .shop1 {
+  font-size: 25px;
+  color: aliceblue;
+}
+.shopp .shop .shop2 button, .overlay .shop .shop2 button {
+  font-size: 15px;
+  padding: 30px;
+  border: white solid 3px;
+}
+
+.shop3 {
+  background: rgba(0, 0, 0, 0.2);
+  color: aliceblue;
+}
+.shop3:hover {
+  background-color: white;
+  background-size: cover;
+  background-attachment: fixed;
+  color: black;
+}
+
+.shop4 {
+  background-color: white;
+}
+.shop4:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: aliceblue;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.text-center {
+  text-align: center;
+  line-height: 5px;
+  padding-top: 100px;
+}
+.text-center h3 {
+  color: rgba(0, 0, 0, 0.4);
+}
+.text-center h2 {
+  font-size: 40px;
+}
+.text-center p {
+  margin: 0 30%;
+  line-height: 20px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.img {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  text-align: center;
+  margin-left: 10%;
+}
+.img .product-item {
+  margin-bottom: 50px;
+}
+.img .product-item figure {
+  margin-top: 50px;
+}
+.img .product-item figure:hover {
+  border: orangered solid 5px;
+}
+.img .product-item .px-4 h3 a {
+  text-decoration: none;
+  color: black;
+}
+.img .product-item .px-4 h3 a:hover {
+  color: orangered;
+}
+.img .product-item .px-4 div {
+  display: grid;
+  grid-template-columns: repeat(2, 20%);
+  justify-content: center;
+}
+.img .product-item .px-4 div .img1 {
+  padding: 10px;
+  border: white solid 2px;
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+  text-decoration: none;
+}
+.img .product-item .px-4 div .img1:hover {
+  background-color: white;
+  color: black;
+  border: black solid 2px;
+}
+.img .product-item .px-4 div .img2 {
+  padding: 10px;
+  border: black solid 2px;
+  background-color: white;
+  color: black;
+  margin-top: 10px;
+  text-decoration: none;
+}
+.img .product-item .px-4 div .img2:hover {
+  background-color: black;
+  color: white;
+  border: white solid 2px;
+}
+.img .product-item .px-4 p {
+  margin: 0 18%;
+  color: rgba(0, 0, 0, 0.4);
+  margin-top: 10px;
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .img {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .img {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.overlay {
+  padding: 5% 0%;
+  text-align: center;
+  color: aliceblue;
+  font-size: 20px;
+  margin: 100px 0;
+}
+.overlay div .rounded-0 {
+  border: white solid 2px;
+  padding: 20px 10px;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+.overlay div .control {
+  width: 300px;
+}
+.overlay div .white {
+  width: 100px;
+}
+.overlay div .btn:hover {
+  background-color: white;
+  color: black;
+}
+.overlay p {
+  padding: 0 30%;
+}
+
+.bg-light {
+  background-color: gainsboro;
+  padding-bottom: 100px;
+}
+
+.mx-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 10px;
+  margin: 5% 10%;
+  background-color: white;
+}
+.mx-4 .mb-5 {
+  margin: 6%;
+}
+.mx-4 .product-title-wrap {
+  margin: 6%;
+}
+.mx-4 .product-title-wrap h3 {
+  font-size: 30px;
+}
+.mx-4 .product-title-wrap p {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.mx-4 .product-title-wrap div h3 {
+  font-size: 25px;
+}
+.mx-4 .product-title-wrap nav {
+  margin-top: 50px;
+}
+.mx-4 .product-title-wrap nav .rounded-0 {
+  padding: 10px;
+  border: white solid 2px;
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+  text-decoration: none;
+}
+.mx-4 .product-title-wrap nav .rounded-0:hover {
+  background-color: white;
+  color: black;
+  border: black solid 2px;
+}
+.mx-4 .product-title-wrap nav .rounded-1 {
+  padding: 10px;
+  border: black solid 2px;
+  background-color: white;
+  color: black;
+  margin-top: 10px;
+  text-decoration: none;
+}
+.mx-4 .product-title-wrap nav .rounded-1:hover {
+  background-color: black;
+  color: white;
+  border: white solid 2px;
+}
+
+@media only screen and (max-width: 900px) {
+  .my-4 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.site {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin: 10% 10% 0;
+  gap: 30px;
+}
+.site div div {
+  border: greenyellow solid 1px;
+  width: 450px;
+  height: 150px;
+  background-color: greenyellow;
+  float: right;
+  padding: 20px;
+}
+.site div div .year {
+  font-size: 50px;
+}
+.site div div .caption {
+  font-size: 30px;
+}
+.site nav {
+  padding-left: 70px;
+  padding-top: 100px;
+}
+.site nav h3 {
+  color: rgba(0, 0, 0, 0.4);
+}
+.site nav h2 {
+  font-size: 40px;
+}
+.site nav a {
+  padding: 10px;
+  border: white solid 2px;
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+  text-decoration: none;
+}
+.site nav a:hover {
+  background-color: white;
+  color: black;
+  border: black solid 2px;
+}
+.site nav p {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+@media only screen and (max-width: 900px) {
+  .site {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.team {
+  display: flex;
+  margin: 0 10%;
+  gap: 20px;
+}
+.team div div {
+  text-align: center;
+}
+.team div div img {
+  margin: 0 30px;
+  width: 70%;
+}
+.team div div h3 {
+  color: rgba(0, 0, 0, 0.4);
+}
+.team div div p {
+  color: rgba(0, 0, 0, 0.4);
+}
+.team div div .position {
+  color: gainsboro;
+}
+.team div div .mb-4 {
+  font-size: 20px;
+}
+.team div div ul {
+  display: flex;
+  gap: 10px;
+  margin: 0 25%;
+}
+.team div div ul li {
+  list-style: none;
+  border: black solid 1px;
+  background-color: black;
+  padding: 10px;
+  border-radius: 100%;
+}
+.team div div ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.team div div ul li a:hover {
+  color: orangered;
+}
+
+@media only screen and (max-width: 900px) {
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.site-blocks-cover div h2 {
+  font-size: 50px;
+}
+.site-blocks-cover p {
+  margin-bottom: 50px;
+}
+.site-blocks-cover a {
+  padding: 10px;
+  border: black solid 2px;
+  background-color: white;
+  color: black;
+  margin-top: 10px;
+  text-decoration: none;
+}
+.site-blocks-cover a:hover {
+  background-color: black;
+  color: white;
+  border: white solid 2px;
+}
+
+.align-items-stretch {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  gap: 30px;
+  margin-left: 10%;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+}
+.align-items-stretch div div div a {
+  text-decoration: none;
+  color: orangered;
+}
+.align-items-stretch div div div a:hover {
+  color: orange;
+}
+
+@media only screen and (max-width: 900px) {
+  .align-items-stretch {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.owl-carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+.owl-carousel div .testimonial figure div img {
+  border-radius: 100%;
+  width: 60%;
+}
+
+.blog {
+  margin-bottom: 50px;
+}
+
+.mb {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  gap: 20px;
+  margin-left: 10%;
+  margin-top: 50px;
+}
+.mb div div h2 a {
+  text-decoration: none;
+  color: black;
+}
+.mb div div p {
+  color: rgba(0, 0, 0, 0.4);
+}
+.mb div div p a {
+  text-decoration: none;
+  color: orangered;
+}
+.mb div div p a:hover {
+  color: orange;
+}
+.mb div div div {
+  color: rgba(0, 0, 0, 0.4);
+}
+.mb div div div a {
+  text-decoration: none;
+  color: orangered;
+}
+.mb div div div a:hover {
+  color: orange;
+}
+
+@media only screen and (max-width: 900px) {
+  .mb {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.justify {
+  background-color: aliceblue;
+  margin: 0 30%;
+  padding: 50px;
+  font-size: 20px;
+}
+
+.form-group div .py-3 {
+  padding: 10px;
+  border: white solid 2px;
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+  text-decoration: none;
+}
+.form-group div .py-3:hover {
+  background-color: white;
+  color: black;
+  border: black solid 2px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  gap: 10px;
+  margin: 10%;
+  font-size: 20px;
+}
+footer div ul {
+  line-height: 30px;
+}
+footer div li {
+  list-style: none;
+}
+footer div a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.4);
+}
+footer div a:hover {
+  color: black;
+}
+footer div p {
+  color: rgba(0, 0, 0, 0.4);
+}
+footer nav p a {
+  padding: 10px;
+  border: white solid 2px;
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+  text-decoration: none;
+}
+footer nav p a:hover {
+  background-color: white;
+  color: black;
+  border: black solid 2px;
+}
+
+@media only screen and (max-width: 900px) {
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=sty.css.map */
